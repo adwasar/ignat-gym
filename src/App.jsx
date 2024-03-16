@@ -1,8 +1,9 @@
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 function App() {
   return (
-    <>
+    <div className="wrapper">
       <Header />
       <main>
         <div className="container">
@@ -12,7 +13,8 @@ function App() {
           <h4>Title</h4>
         </div>
       </main>
-    </>
+      <Footer />
+    </div>
   )
 }
 
