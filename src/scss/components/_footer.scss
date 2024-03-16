@@ -10,8 +10,16 @@ footer {
   }
 
   &__content {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
+    gap: 32px;
+    @include v-lg {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include v-sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__wrapper {
@@ -40,6 +48,7 @@ footer {
 
     li {
       height: 24px;
+      cursor: pointer;
     }
   }
 }
@@ -47,21 +56,31 @@ footer {
 .footer-bottom {
   color: $white;
   background-color: $black-80;
+  padding: 38px 0;
   &__content {
-    height: 93px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
+    @include v-lg {
+      flex-direction: column;
+    }
   }
 
   &__nav {
     text-transform: uppercase;
     font-size: 14px;
+    @include v-sm {
+      margin-right: auto;
+    }
   }
 
   &__nav-list {
     display: flex;
     gap: 30px;
+    @include v-sm {
+      flex-direction: column;
+    }
   }
 
   &__no-copyright {
