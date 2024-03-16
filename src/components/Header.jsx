@@ -1,3 +1,5 @@
+import BurgerMenu from './BoorgerMenu'
+
 import LogoPath from '../assets/icons/Logo.png'
 import SearchPath from '../assets/icons/search.svg'
 import HeartPath from '../assets/icons/heart.svg'
@@ -68,6 +70,7 @@ function Header() {
             </div>
           </div>
         </div>
+        <BurgerMenu />
       </header>
     </>
   )

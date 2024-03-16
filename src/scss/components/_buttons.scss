@@ -1,0 +1,38 @@
+.btn-close {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  flex: 0 0 30px;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  border: none;
+
+  &__tt,
+  &__bb {
+    position: absolute;
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid $black-80;
+    border-radius: 1px;
+  }
+
+  &__tt {
+    transform: rotate(45deg);
+  }
+
+  &__bb {
+    transform: rotate(-45deg);
+  }
+
+  &.black {
+    &__tt,
+    &__bb {
+      border-bottom: 2px solid $black-80;
+      border-radius: 1px;
+    }
+  }
+}
