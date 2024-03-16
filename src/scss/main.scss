@@ -1,8 +1,9 @@
 @import './inc/variables';
 @import './inc/text';
-@import './inc/base';
 @import './inc/breakpoints';
+@import './inc/base';
 
 // components
 @import './components/header';
 @import './components/footer';
+@import './components/boorger-btn';

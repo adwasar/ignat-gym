@@ -53,6 +53,11 @@ function Header() {
                 </ul>
               </nav>
               <div className="header-bottom__right-nav">
+                <div className="burger-btn">
+                  <span className="burger-btn__tt"></span>
+                  <span className="burger-btn__mm"></span>
+                  <span className="burger-btn__bb"></span>
+                </div>
                 <form className="header-bottom__form">
                   <img src={SearchPath} alt="search" />
                   <input className="header-bottom__input" type="text" />

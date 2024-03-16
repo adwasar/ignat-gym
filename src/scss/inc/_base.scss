@@ -7,8 +7,15 @@ body {
   font-size: 16px;
 }
 
+main {
+  @include v-lg {
+    padding-top: 65px;
+  }
+}
+
 .wrapper {
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   min-height: 100vh;
 }
