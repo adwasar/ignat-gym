@@ -1,16 +1,35 @@
-import LogoPath from '../assets/icons/Logo.png'
+import PropTypes from 'prop-types'
 
-function BurgerMenu() {
+import LogoPath from '../assets/icons/Logo.png'
+import { useEffect, useRef } from 'react'
+
+function BurgerMenu({ closeMenu, menuIsOpen }) {
+  const burgerMenuRef = useRef(null)
+
+  useEffect(() => {
+    const handler = (e) => {
+      if (!burgerMenuRef.current?.contains(e.target)) {
+        closeMenu()
+      }
+    }
+
+    document.addEventListener('mousedown', handler)
+
+    return () => {
+      document.removeEventListener('mousedown', handler)
+    }
+  })
+
   return (
     <>
-      <aside className="burger-menu">
+      <aside className={`burger-menu ${menuIsOpen ? 'active' : ''}`} ref={burgerMenuRef}>
         <header className="burger-menu__header">
           <div className="burger-menu__logo">
             <a href="#">
               <img src={LogoPath} alt="logo" />
             </a>
           </div>
-          <button className="burger-menu__btn-close btn-close">
+          <button className="burger-menu__btn-close btn-close" onClick={closeMenu}>
             <span className="btn-close__tt"></span>
             <span className="btn-close__bb"></span>
           </button>
@@ -46,9 +65,14 @@ function BurgerMenu() {
           </ul>
         </nav>
       </aside>
-      <div className="burger-menu-overlay"></div>
+      <div className={`burger-menu-overlay ${menuIsOpen ? 'active' : ''}`}></div>
     </>
   )
+}
+
+BurgerMenu.propTypes = {
+  closeMenu: PropTypes.func.isRequired,
+  menuIsOpen: PropTypes.bool.isRequired,
 }
 
 export default BurgerMenu

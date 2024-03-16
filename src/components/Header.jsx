@@ -4,8 +4,19 @@ import LogoPath from '../assets/icons/Logo.png'
 import SearchPath from '../assets/icons/search.svg'
 import HeartPath from '../assets/icons/heart.svg'
 import BagPath from '../assets/icons/bag.svg'
+import { useState } from 'react'
 
 function Header() {
+  const [menuIsOpen, setMenuIsOpen] = useState(false)
+
+  const openMenu = () => {
+    setMenuIsOpen(true)
+  }
+
+  const closeMenu = () => {
+    setMenuIsOpen(false)
+  }
+
   return (
     <>
       <header>
@@ -55,7 +66,7 @@ function Header() {
                 </ul>
               </nav>
               <div className="header-bottom__right-nav">
-                <div className="burger-btn">
+                <div className="burger-btn" onClick={openMenu}>
                   <span className="burger-btn__tt"></span>
                   <span className="burger-btn__mm"></span>
                   <span className="burger-btn__bb"></span>
@@ -70,7 +81,7 @@ function Header() {
             </div>
           </div>
         </div>
-        <BurgerMenu />
+        <BurgerMenu menuIsOpen={menuIsOpen} closeMenu={closeMenu} />
       </header>
     </>
   )
