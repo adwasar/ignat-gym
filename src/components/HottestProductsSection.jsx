@@ -1,11 +1,36 @@
 import ArrowLeftPath from '../assets/icons/long-arrow-left.svg'
 import ArrowRightPath from '../assets/icons/long-arrow-right.svg'
-
-import cardData from '../data/cardData.json'
+import Product_1Path from '../assets/img/product_1.png'
+import Product_2Path from '../assets/img/product_2.png'
+import Product_3Path from '../assets/img/product_3.png'
 
 import ProductCard from './ProductCard'
 
 function HottestProductsSection() {
+  const cardData = [
+    {
+      imgPath: Product_1Path,
+      title: 'Термобілизна для бодібілдерів',
+      category: 'Для чоловіків',
+      remainder: '2 кольори',
+      price: 4000,
+    },
+    {
+      imgPath: Product_2Path,
+      title: 'Майка для бодібілдерів',
+      category: 'Для жінок',
+      remainder: '6 кольорів',
+      price: 1100,
+    },
+    {
+      imgPath: Product_3Path,
+      title: 'Ланцюжок для бодібілдерів',
+      category: 'Аксесуари',
+      remainder: '30 кг.',
+      price: 2000,
+    },
+  ]
+
   return (
     <section className="hottest-products">
       <div className="container">
