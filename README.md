@@ -20,4 +20,4 @@
 3. Запустите проект: **npm run dev**
 
 ## Деплой
-https://lighthearted-griffin-2e5ae8.netlify.app/
+https://adwasar.github.io/ignat-gym/
