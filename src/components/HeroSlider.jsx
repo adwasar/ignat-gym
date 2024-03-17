@@ -1,8 +1,23 @@
+import { useState } from 'react'
+
 import ArrowLeftPath from '../assets/icons/hero-arrow-left.svg'
 import ArrowRightPath from '../assets/icons/hero-arrow-right.svg'
-import PaginationLinePath from '../assets/icons/pagination-line.svg'
 
 function HeroSlider() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  const totalSlides = 3
+
+  const prevSlide = () => {
+    const newIndex = (currentSlide - 1 + totalSlides) % totalSlides
+    setCurrentSlide(newIndex)
+  }
+
+  const nextSlide = () => {
+    const newIndex = (currentSlide + 1 + totalSlides) % totalSlides
+    setCurrentSlide(newIndex)
+  }
+
   return (
     <section className="hero-slider">
       <div className="container">
@@ -20,14 +35,38 @@ function HeroSlider() {
             </div>
           </div>
           <div className="hero-slider__arrows">
-            <img src={ArrowLeftPath} alt="arrow left" className="hero-slider__arrow-left"></img>
-            <img src={ArrowRightPath} alt="arrow left" className="hero-slider__arrow-right"></img>
+            <img
+              src={ArrowLeftPath}
+              alt="arrow left"
+              className="hero-slider__arrow-left"
+              onClick={prevSlide}
+            ></img>
+            <img
+              src={ArrowRightPath}
+              alt="arrow left"
+              className="hero-slider__arrow-right"
+              onClick={nextSlide}
+            ></img>
           </div>
         </div>
         <div className="hero-slider__pagination">
-          <img src={PaginationLinePath} alt="#" />
-          <img src={PaginationLinePath} alt="#" />
-          <img src={PaginationLinePath} alt="#" />
+          {Array.from({ length: totalSlides }, (_, index) => (
+            <svg
+              key={index}
+              width="19"
+              height="4"
+              viewBox="0 0 19 4"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 2H17"
+                stroke={index === currentSlide ? '#ffffff' : '#626262'}
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+            </svg>
+          ))}
         </div>
       </div>
     </section>

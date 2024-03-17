@@ -6,8 +6,6 @@ import cardData from '../data/cardData.json'
 import ProductCard from './ProductCard'
 
 function HottestProductsSection() {
-  console.log(cardData)
-
   return (
     <section className="hottest-products">
       <div className="container">
