@@ -1,0 +1,30 @@
+.review-card {
+  padding: 30px 37px;
+  border: 1px solid $black-60;
+  border-radius: 10px;
+  max-height: 300px;
+  min-width: 200px;
+  overflow-x: hidden;
+  @include v-xl {
+    padding: 16px;
+  }
+  &__header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__name {
+    font-weight: 500;
+    color: $black-100;
+    line-height: 30px;
+    @include v-lg {
+      line-height: normal;
+    }
+  }
+
+  &__text {
+    margin: 20px 0 0;
+    color: $black-60;
+  }
+}

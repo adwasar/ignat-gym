@@ -4,6 +4,7 @@ import HeroSlider from './components/HeroSlider'
 import GreatFriendsSection from './components/GreatFriendsSection'
 import HottestProductsSection from './components/HottestProductsSection'
 import PromoFormSection from './components/PromoFormSection'
+import ReviewsSection from './components/ReviewsSection'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <GreatFriendsSection />
         <HottestProductsSection />
         <PromoFormSection />
+        <ReviewsSection />
       </main>
       <Footer />
     </div>

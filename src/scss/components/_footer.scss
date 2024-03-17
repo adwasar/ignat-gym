@@ -3,8 +3,13 @@ footer {
 }
 
 .footer-top {
+  margin-top: 158px;
   padding: 46px 0 52px;
   border-top: 1px solid $black-20;
+  @include v-md {
+    margin-top: 80px;
+  }
+
   li {
     color: $black-60;
   }
