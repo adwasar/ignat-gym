@@ -1,7 +1,6 @@
 .hero-slider {
   position: relative;
   padding: 100px 0;
-  background-image: url('../assets/img/hero-bg.png');
   background-size: cover;
   background-position: center;
   font-family: $inter;
@@ -31,7 +30,9 @@
   &__title {
     margin: 0;
     font-size: 64px;
+    white-space: pre-line;
     font-weight: 900;
+    width: 250px;
     @include v-md {
       line-height: normal;
       font-size: 36px;

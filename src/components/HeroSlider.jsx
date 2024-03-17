@@ -2,9 +2,21 @@ import { useState } from 'react'
 
 import ArrowLeftPath from '../assets/icons/hero-arrow-left.svg'
 import ArrowRightPath from '../assets/icons/hero-arrow-right.svg'
+import HeroBg_1Path from '../assets/img/hero-bg-1.png'
+import HeroBg_2Path from '../assets/img/hero-bg-2.jpeg'
+import HeroBg_3Path from '../assets/img/hero-bg-3.jpeg'
 
 function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
+
+  const images = [HeroBg_1Path, HeroBg_2Path, HeroBg_3Path]
+
+  const titles = [
+    'Швидше. Вище. Сильніше.',
+    'Title_2. Title_2. Title_2.',
+    'Title_3. Title_3. Title_3.',
+  ]
+  const subTitles = ['Разом iз Nike', 'Разом iз Adidas', 'Разом з Puma']
 
   const totalSlides = 3
 
@@ -19,15 +31,13 @@ function HeroSlider() {
   }
 
   return (
-    <section className="hero-slider">
+    <section className="hero-slider" style={{ backgroundImage: `url(${images[currentSlide]})` }}>
       <div className="container">
         <div className="hero-slider__content-wrapper">
           <div className="hero-slider__content">
             <div className="hero-slider__left">
-              <h1 className="hero-slider__title">
-                Швидше. <br /> Вище. <br /> Сильніше.
-              </h1>
-              <p className="hero-slider__sub-title">Разом із Nike</p>
+              <h1 className="hero-slider__title">{titles[currentSlide]}</h1>
+              <p className="hero-slider__sub-title">{subTitles[currentSlide]}</p>
             </div>
             <div className="hero-slider__right">
               <p className="hero-slider__discounts">Знижки до 40%</p>
