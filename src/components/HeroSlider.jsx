@@ -4,7 +4,7 @@ import PaginationLinePath from '../assets/icons/pagination-line.svg'
 
 function HeroSlider() {
   return (
-    <div className="hero-slider">
+    <section className="hero-slider">
       <div className="container">
         <div className="hero-slider__content-wrapper">
           <div className="hero-slider__content">
@@ -30,7 +30,7 @@ function HeroSlider() {
           <img src={PaginationLinePath} alt="#" />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

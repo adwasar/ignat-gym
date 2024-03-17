@@ -1,6 +1,7 @@
 import Header from './components/Header'
 import Footer from './components/Footer'
 import HeroSlider from './components/HeroSlider'
+import GreatFriendsSection from './components/GreatFriendsSection'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <main>
         <HeroSlider />
+        <GreatFriendsSection />
         <div className="container">
           <h1>Title</h1>
           <h2>Title</h2>

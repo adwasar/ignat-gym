@@ -36,3 +36,17 @@
     }
   }
 }
+
+.btn {
+  padding: 20px 35px;
+  margin: 0;
+  color: $white;
+  background-color: $black-100;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.btn_gray {
+  background-color: $black-60;
+}
