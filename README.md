@@ -1,8 +1,23 @@
-# React + Vite
+# Документация проекта
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+В проекте была взят макет из mian page.
 
-Currently, two official plugins are available:
+## Структура проекта
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Каталог app: содержит исходный код веб-приложения.
+2. Директоиря "components" содержит в себе повторяющиеся комаоненты, а также отдельные секции лендинга
+3. Директория "data" хранит в себе информацию для карточек товара
+4. Директория "scss" хранит в себе стили, все стили импортируются в фалйл main.scss.
+
+## Функционал проекта
+
+1. В пректе реализованный адаптивный дизайн. Сайт выглядит аккуратно на любой ширине экрана
+2. Реализован слайдер в секции hero. Слайдер имеет бесконечную прокуруту. Текущая страница подсвечивается внизу сладера
+
+## Запуск проэкта
+1. Загрузите исходный код
+2. Установите зависимости: **yarn install**
+3. Запустите проект: **npm run dev**
+
+## Деплой
+https://lighthearted-griffin-2e5ae8.netlify.app/
