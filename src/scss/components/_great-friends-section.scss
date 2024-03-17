@@ -5,6 +5,7 @@
   }
   &__content {
     display: flex;
+    gap: 16px;
     @include v-md {
       flex-direction: column;
     }

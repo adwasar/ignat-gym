@@ -1,0 +1,39 @@
+.hottest-products {
+  padding: 0 0 80px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    @include v-sm {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 26px;
+    color: $black-80;
+    line-height: normal;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__arrows {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__cards {
+    margin-top: 31px;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    overflow: scroll;
+  }
+}

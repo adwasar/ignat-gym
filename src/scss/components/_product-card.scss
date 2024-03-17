@@ -1,0 +1,39 @@
+.product-card {
+  width: 100%;
+  &__img-container {
+    width: 100%;
+    height: 433px;
+    overflow: hidden;
+    @include v-xl {
+      height: 360px;
+    }
+    @include v-lg {
+      height: 320px;
+    }
+  }
+
+  &__img {
+    height: 100%;
+  }
+
+  &__title {
+    margin: 15px 0 20;
+    color: $black-80;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &__category,
+  &__remainder {
+    color: $black-60;
+  }
+
+  &__price {
+    display: block;
+    margin-top: 17px;
+    color: #4aaa4e;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
