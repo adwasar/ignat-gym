@@ -3,6 +3,7 @@ import Footer from './components/Footer'
 import HeroSlider from './components/HeroSlider'
 import GreatFriendsSection from './components/GreatFriendsSection'
 import HottestProductsSection from './components/HottestProductsSection'
+import PromoFormSection from './components/PromoFormSection'
 
 function App() {
   return (
@@ -12,12 +13,7 @@ function App() {
         <HeroSlider />
         <GreatFriendsSection />
         <HottestProductsSection />
-        <div className="container">
-          <h1>Title</h1>
-          <h2>Title</h2>
-          <h3>Title</h3>
-          <h4>Title</h4>
-        </div>
+        <PromoFormSection />
       </main>
       <Footer />
     </div>
