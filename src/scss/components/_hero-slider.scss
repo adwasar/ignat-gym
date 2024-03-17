@@ -1,0 +1,93 @@
+.hero-slider {
+  position: relative;
+  padding: 100px 0;
+  background-image: url('../assets/img/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  font-family: $inter;
+  @include v-lg {
+    padding: 50px 0px;
+  }
+  &__content-wrapper {
+    position: relative;
+    height: 100%;
+    color: $white;
+  }
+
+  &__content {
+    padding: 0 100px;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+    @include v-lg {
+      flex-direction: column;
+    }
+    @include v-md {
+      padding: 0 50px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 64px;
+    font-weight: 900;
+    @include v-md {
+      line-height: normal;
+      font-size: 36px;
+    }
+  }
+
+  &__sub-title {
+    margin: 20px 0 0;
+    font-size: 64px;
+    font-weight: 300;
+    white-space: nowrap;
+    @include v-md {
+      font-size: 36px;
+    }
+  }
+
+  &__right {
+    text-align: center;
+  }
+
+  &__discounts {
+    margin: 0;
+    padding: 15px 34px;
+    font-weight: 300;
+    font-size: 40px;
+    white-space: nowrap;
+    backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255, 0.3);
+    @include v-md {
+      padding: 6px 12px;
+      font-size: 32px;
+    }
+  }
+
+  &__discounts-sub {
+    margin: 20px 0 0;
+    font-size: 20px;
+  }
+
+  &__arrows {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  &__pagination {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    bottom: 20px;
+  }
+}
