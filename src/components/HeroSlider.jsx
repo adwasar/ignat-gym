@@ -31,33 +31,74 @@ function HeroSlider() {
   }
 
   return (
-    <section className="hero-slider" style={{ backgroundImage: `url(${images[currentSlide]})` }}>
-      <div className="container">
-        <div className="hero-slider__content-wrapper">
-          <div className="hero-slider__content">
-            <div className="hero-slider__left">
-              <h1 className="hero-slider__title">{titles[currentSlide]}</h1>
-              <p className="hero-slider__sub-title">{subTitles[currentSlide]}</p>
-            </div>
-            <div className="hero-slider__right">
-              <p className="hero-slider__discounts">Знижки до 40%</p>
-              <p>Залишився лише тиждень</p>
+    <section className="hero-slider">
+      <div
+        className="hero-slider__wrapper"
+        style={{ transform: `translateX(-${100 * currentSlide}%)` }}
+      >
+        <div className="hero-slider__bg" style={{ backgroundImage: `url(${images[0]})` }}>
+          <div className="container">
+            <div className="hero-slider__content-wrapper">
+              <div className="hero-slider__content">
+                <div className="hero-slider__left">
+                  <h1 className="hero-slider__title">{titles[currentSlide]}</h1>
+                  <p className="hero-slider__sub-title">{subTitles[currentSlide]}</p>
+                </div>
+                <div className="hero-slider__right">
+                  <p className="hero-slider__discounts">Знижки до 40%</p>
+                  <p>Залишився лише тиждень</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="hero-slider__arrows">
-            <img
-              src={ArrowLeftPath}
-              alt="arrow left"
-              className="hero-slider__arrow-left"
-              onClick={prevSlide}
-            ></img>
-            <img
-              src={ArrowRightPath}
-              alt="arrow left"
-              className="hero-slider__arrow-right"
-              onClick={nextSlide}
-            ></img>
+        </div>
+        <div className="hero-slider__bg" style={{ backgroundImage: `url(${images[1]})` }}>
+          <div className="container">
+            <div className="hero-slider__content-wrapper">
+              <div className="hero-slider__content">
+                <div className="hero-slider__left">
+                  <h1 className="hero-slider__title">{titles[currentSlide]}</h1>
+                  <p className="hero-slider__sub-title">{subTitles[currentSlide]}</p>
+                </div>
+                <div className="hero-slider__right">
+                  <p className="hero-slider__discounts">Знижки до 40%</p>
+                  <p>Залишився лише тиждень</p>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+        <div className="hero-slider__bg" style={{ backgroundImage: `url(${images[2]})` }}>
+          <div className="container">
+            <div className="hero-slider__content-wrapper">
+              <div className="hero-slider__content">
+                <div className="hero-slider__left">
+                  <h1 className="hero-slider__title">{titles[currentSlide]}</h1>
+                  <p className="hero-slider__sub-title">{subTitles[currentSlide]}</p>
+                </div>
+                <div className="hero-slider__right">
+                  <p className="hero-slider__discounts">Знижки до 40%</p>
+                  <p>Залишився лише тиждень</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="hero-slider__container-nav">
+        <div className="hero-slider__arrows">
+          <img
+            src={ArrowLeftPath}
+            alt="arrow left"
+            className="hero-slider__arrow-left"
+            onClick={prevSlide}
+          ></img>
+          <img
+            src={ArrowRightPath}
+            alt="arrow left"
+            className="hero-slider__arrow-right"
+            onClick={nextSlide}
+          ></img>
         </div>
         <div className="hero-slider__pagination">
           {Array.from({ length: totalSlides }, (_, index) => (

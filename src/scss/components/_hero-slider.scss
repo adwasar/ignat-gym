@@ -1,11 +1,22 @@
 .hero-slider {
   position: relative;
-  padding: 100px 0;
-  background-size: cover;
-  background-position: center;
-  font-family: $inter;
-  @include v-lg {
-    padding: 50px 0px;
+  &__wrapper {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    transition: 0.4s;
+  }
+  &__bg {
+    flex: 0 0 100%;
+    position: relative;
+    padding: 100px 0;
+    background-size: cover;
+    background-position: center;
+    font-family: $inter;
+    @include v-lg {
+      padding: 50px 0px;
+    }
   }
   &__content-wrapper {
     position: relative;
@@ -23,7 +34,7 @@
       flex-direction: column;
     }
     @include v-md {
-      padding: 0 50px;
+      padding: 0;
     }
   }
 
@@ -72,13 +83,27 @@
     font-size: 20px;
   }
 
-  &__arrows {
+  &__container-nav {
     position: absolute;
+    top: 0;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    padding: 0 16px;
+    height: 100%;
+    max-width: 1170px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  &__arrows {
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
+
     cursor: pointer;
   }
 
