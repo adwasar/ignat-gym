@@ -6,17 +6,16 @@ import HeroBg_1Path from '../assets/img/hero-bg-1.png'
 import HeroBg_2Path from '../assets/img/hero-bg-2.jpeg'
 import HeroBg_3Path from '../assets/img/hero-bg-3.jpeg'
 
+import Slider from './Slider'
+
 function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  const images = [HeroBg_1Path, HeroBg_2Path, HeroBg_3Path]
-
-  const titles = [
-    'Швидше. Вище. Сильніше.',
-    'Title_2. Title_2. Title_2.',
-    'Title_3. Title_3. Title_3.',
+  const sliders = [
+    { imagePath: HeroBg_1Path, title: 'Швидше. Вище. Сильніше', subTitle: 'Разом iз Nike' },
+    { imagePath: HeroBg_2Path, title: 'Title_2. Title_2. Title_2.', subTitle: 'Разом iз Adidas' },
+    { imagePath: HeroBg_3Path, title: 'Title_2. Title_2. Title_2', subTitle: 'Разом з Puma' },
   ]
-  const subTitles = ['Разом iз Nike', 'Разом iз Adidas', 'Разом з Puma']
 
   const totalSlides = 3
 
@@ -36,54 +35,9 @@ function HeroSlider() {
         className="hero-slider__wrapper"
         style={{ transform: `translateX(-${100 * currentSlide}%)` }}
       >
-        <div className="hero-slider__bg" style={{ backgroundImage: `url(${images[0]})` }}>
-          <div className="container">
-            <div className="hero-slider__content-wrapper">
-              <div className="hero-slider__content">
-                <div className="hero-slider__left">
-                  <h1 className="hero-slider__title">{titles[currentSlide]}</h1>
-                  <p className="hero-slider__sub-title">{subTitles[currentSlide]}</p>
-                </div>
-                <div className="hero-slider__right">
-                  <p className="hero-slider__discounts">Знижки до 40%</p>
-                  <p>Залишився лише тиждень</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="hero-slider__bg" style={{ backgroundImage: `url(${images[1]})` }}>
-          <div className="container">
-            <div className="hero-slider__content-wrapper">
-              <div className="hero-slider__content">
-                <div className="hero-slider__left">
-                  <h1 className="hero-slider__title">{titles[currentSlide]}</h1>
-                  <p className="hero-slider__sub-title">{subTitles[currentSlide]}</p>
-                </div>
-                <div className="hero-slider__right">
-                  <p className="hero-slider__discounts">Знижки до 40%</p>
-                  <p>Залишився лише тиждень</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="hero-slider__bg" style={{ backgroundImage: `url(${images[2]})` }}>
-          <div className="container">
-            <div className="hero-slider__content-wrapper">
-              <div className="hero-slider__content">
-                <div className="hero-slider__left">
-                  <h1 className="hero-slider__title">{titles[currentSlide]}</h1>
-                  <p className="hero-slider__sub-title">{subTitles[currentSlide]}</p>
-                </div>
-                <div className="hero-slider__right">
-                  <p className="hero-slider__discounts">Знижки до 40%</p>
-                  <p>Залишився лише тиждень</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {sliders.map((slide) => (
+          <Slider imagePath={slide.imagePath} title={slide.title} subTitle={slide.subTitle} />
+        ))}
       </div>
       <div className="hero-slider__container-nav">
         <div className="hero-slider__arrows">
