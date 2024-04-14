@@ -38,7 +38,7 @@
     display: flex;
     gap: 30px;
     justify-content: space-between;
-    overflow: scroll;
+    overflow: auto;
     @include v-lg {
       gap: 16px;
     }
