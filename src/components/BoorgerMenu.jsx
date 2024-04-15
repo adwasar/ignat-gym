@@ -22,10 +22,10 @@ function BurgerMenu({ closeMenu, menuIsOpen }) {
 
   return (
     <>
-      <aside className={`burger-menu ${menuIsOpen ? 'active' : ''}`} ref={burgerMenuRef}>
+      <div className={`burger-menu ${menuIsOpen ? 'active' : ''}`} ref={burgerMenuRef}>
         <header className="burger-menu__header">
           <div className="burger-menu__logo">
-            <a href="#">
+            <a href="#" onClick={closeMenu}>
               <img src={LogoPath} alt="logo" />
             </a>
           </div>
@@ -37,34 +37,50 @@ function BurgerMenu({ closeMenu, menuIsOpen }) {
         <nav className="burger-menu__nav">
           <ul className="burger-menu__list-top">
             <li className="burger-menu__item">
-              <a to="#">новинки</a>
+              <a href="#" onClick={closeMenu}>
+                новинки
+              </a>
             </li>
             <li className="burger-menu__item">
-              <a to="#">чоловіки</a>
+              <a href="#" onClick={closeMenu}>
+                чоловіки
+              </a>
             </li>
             <li className="burger-menu__item">
-              <a to="#">жінки</a>
+              <a href="#" onClick={closeMenu}>
+                жінки
+              </a>
             </li>
             <li className="burger-menu__item">
-              <a to="#">аксесуари</a>
+              <a href="#" onClick={closeMenu}>
+                аксесуари
+              </a>
             </li>
             <li className="burger-menu__item">
-              <a to="#">акції</a>
+              <a href="#" onClick={closeMenu}>
+                акції
+              </a>
             </li>
             <li className="burger-menu__item">
-              <a to="#">допомога</a>
+              <a href="#" onClick={closeMenu}>
+                допомога
+              </a>
             </li>
           </ul>
           <ul className="burger-menu__list-bottom">
             <li className="burger-menu__item">
-              <a to="#">увійти</a>
+              <a href="#" onClick={closeMenu}>
+                увійти
+              </a>
             </li>
             <li className="burger-menu__item">
-              <a to="#">зареєструватися</a>
+              <a href="#" onClick={closeMenu}>
+                зареєструватися
+              </a>
             </li>
           </ul>
         </nav>
-      </aside>
+      </div>
       <div className={`burger-menu-overlay ${menuIsOpen ? 'active' : ''}`}></div>
     </>
   )

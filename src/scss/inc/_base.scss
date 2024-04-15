@@ -38,3 +38,10 @@ a {
   height: 100%;
   box-sizing: content-box;
 }
+
+.menu-open {
+  overflow: auto;
+  @include v-lg {
+    overflow: hidden;
+  }
+}

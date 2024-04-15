@@ -11,10 +11,12 @@ function Header() {
 
   const openMenu = () => {
     setMenuIsOpen(true)
+    document.body.classList.add('menu-open')
   }
 
   const closeMenu = () => {
     setMenuIsOpen(false)
+    document.body.classList.remove('menu-open')
   }
 
   return (
