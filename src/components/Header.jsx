@@ -25,12 +25,12 @@ function Header() {
             <div className="header-top__content">
               <div className="header-top__contacts">
                 <ul className="header-top__contacts-list">
-                  <a href="#">
-                    <li className="header-top__phone">098 900 09 09</li>
-                  </a>
-                  <a href="#">
-                    <li className="header-top__help">Допомога</li>
-                  </a>
+                  <li>
+                    <a href="#">098 900 09 09</a>
+                  </li>
+                  <li>
+                    <a href="#">Допомога</a>
+                  </li>
                 </ul>
               </div>
               <div className="header-top__auth">
@@ -48,21 +48,21 @@ function Header() {
               </div>
               <nav className="header-bottom__nav">
                 <ul className="header-bottom__nav-list">
-                  <a href="#">
-                    <li>новинки</li>
-                  </a>
-                  <a href="#">
-                    <li>чоловіки</li>
-                  </a>
-                  <a href="#">
-                    <li>жінки</li>
-                  </a>
-                  <a href="#">
-                    <li>аксесуари</li>
-                  </a>
-                  <a href="#">
-                    <li>акції</li>
-                  </a>
+                  <li>
+                    <a href="#">новинки</a>
+                  </li>
+                  <li>
+                    <a href="#">чоловіки</a>
+                  </li>
+                  <li>
+                    <a href="#">жінки</a>
+                  </li>
+                  <li>
+                    <a href="#">аксесуари</a>
+                  </li>
+                  <li>
+                    <a href="#">акції</a>
+                  </li>
                 </ul>
               </nav>
               <div className="header-bottom__right-nav">
