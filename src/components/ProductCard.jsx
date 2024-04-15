@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-import HeartPath from '../assets/icons/products-slider-heart.svg'
+import heartPath from '../assets/icons/products-slider-heart.svg'
 
 function ProductCard({ imgPath, title, category, remainder, price }) {
   return (
@@ -14,7 +14,7 @@ function ProductCard({ imgPath, title, category, remainder, price }) {
       <span className="product-card__remainder">{remainder}</span>
       <br />
       <span className="product-card__price">{`${price} грн.`}</span>
-      <img className="product-card__like" src={HeartPath} alt="heart" />
+      <img className="product-card__like" src={heartPath} alt="heart" />
     </div>
   )
 }

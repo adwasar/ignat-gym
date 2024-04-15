@@ -1,7 +1,7 @@
+import { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 
-import LogoPath from '../assets/icons/Logo.png'
-import { useEffect, useRef } from 'react'
+import logoPath from '../assets/icons/Logo.png'
 
 function BurgerMenu({ closeMenu, menuIsOpen }) {
   const burgerMenuRef = useRef(null)
@@ -26,7 +26,7 @@ function BurgerMenu({ closeMenu, menuIsOpen }) {
         <header className="burger-menu__header">
           <div className="burger-menu__logo">
             <a href="#" onClick={closeMenu}>
-              <img src={LogoPath} alt="logo" />
+              <img src={logoPath} alt="logo" />
             </a>
           </div>
           <button className="burger-menu__btn-close btn-close" onClick={closeMenu}>

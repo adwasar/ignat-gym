@@ -1,5 +1,5 @@
-import ArrowLeftPath from '../assets/icons/long-arrow-left.svg'
-import ArrowRightPath from '../assets/icons/long-arrow-right.svg'
+import arrowLeftPath from '../assets/icons/long-arrow-left.svg'
+import arrowRightPath from '../assets/icons/long-arrow-right.svg'
 
 import ReviewCard from './ReviewCard'
 
@@ -12,8 +12,8 @@ function Reviews() {
           <div className="reviews__nav">
             <span className="reviews__page">01 / 03</span>
             <div className="reviews__arrows">
-              <img src={ArrowLeftPath} alt="arrow left" />
-              <img src={ArrowRightPath} alt="arrow right" />
+              <img src={arrowLeftPath} alt="arrow left" />
+              <img src={arrowRightPath} alt="arrow right" />
             </div>
           </div>
         </div>

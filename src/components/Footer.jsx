@@ -1,6 +1,6 @@
-import InstPath from '../assets/icons/inst.svg'
-import ViberPath from '../assets/icons/viber.svg'
-import TelegramPath from '../assets/icons/telegram.svg'
+import instPath from '../assets/icons/inst.svg'
+import viberPath from '../assets/icons/viber.svg'
+import telegramPath from '../assets/icons/telegram.svg'
 
 function Footer() {
   return (
@@ -19,13 +19,13 @@ function Footer() {
               </div>
               <ul className="footer-top__list-media">
                 <li>
-                  <img src={InstPath} alt="Instagram" />
+                  <img src={instPath} alt="Instagram" />
                 </li>
                 <li>
-                  <img src={ViberPath} alt="Viber" />
+                  <img src={viberPath} alt="Viber" />
                 </li>
                 <li>
-                  <img src={TelegramPath} alt="Telegram" />
+                  <img src={telegramPath} alt="Telegram" />
                 </li>
               </ul>
             </div>

@@ -1,10 +1,10 @@
-import BurgerMenu from './BoorgerMenu'
-
-import LogoPath from '../assets/icons/Logo.png'
-import SearchPath from '../assets/icons/search.svg'
-import HeartPath from '../assets/icons/heart.svg'
-import BagPath from '../assets/icons/bag.svg'
 import { useState } from 'react'
+
+import BurgerMenu from './BoorgerMenu'
+import logoPath from '../assets/icons/Logo.png'
+import searchPath from '../assets/icons/search.svg'
+import heartPath from '../assets/icons/heart.svg'
+import bagPath from '../assets/icons/bag.svg'
 
 function Header() {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
@@ -46,7 +46,7 @@ function Header() {
           <div className="container">
             <div className="header-bottom__content">
               <div className="header-bottom__logo">
-                <img src={LogoPath} alt="Logo" />
+                <img src={logoPath} alt="Logo" />
               </div>
               <nav className="header-bottom__nav">
                 <ul className="header-bottom__nav-list">
@@ -74,11 +74,11 @@ function Header() {
                   <span className="burger-btn__bb"></span>
                 </div>
                 <form className="header-bottom__form">
-                  <img src={SearchPath} alt="search" />
+                  <img src={searchPath} alt="search" />
                   <input className="header-bottom__input" type="text" />
                 </form>
-                <img src={HeartPath} alt="heart" />
-                <img src={BagPath} alt="heart" />
+                <img src={heartPath} alt="heart" />
+                <img src={bagPath} alt="heart" />
               </div>
             </div>
           </div>
